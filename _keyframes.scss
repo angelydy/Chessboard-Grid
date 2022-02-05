@@ -1,0 +1,23 @@
+@keyframes fade {
+  0%, 20% {opacity: 0; transform: rotate(5deg);}
+  100% {opacity: 1; transform: skew(1deg);}
+}
+
+@keyframes pushSide {
+  0% {margin-left: -500px; opacity: 0;}
+  25% {margin-left: -500px; opacity: 0;}
+  50% {margin-left: 0px; opacity: 1;}
+  100% {margin-left: 0px; opacity: 1;}
+}
+
+@keyframes firstMove {
+  0% {transform: translateY(0px);}
+  35% {background-color: rgba(160, 92, 47, 0.956);}
+  100% {transform: translateY(155px);}
+}
+
+@keyframes secondMove {
+  0% {transform: translateY(0px);}
+  35% {background-color:white;}
+  100% {transform: translateY(-140px);}
+}

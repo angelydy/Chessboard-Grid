@@ -1,4 +1,65 @@
 @import url("https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@900&family=Poppins:wght@500;700&display=swap");
+.board {
+  position: relative;
+  top: 50px;
+  display: -ms-grid;
+  display: grid;
+  margin: auto;
+  -ms-grid-columns: (1fr)[8];
+      grid-template-columns: repeat(8, 1fr);
+  -ms-grid-rows: (1fr)[8];
+      grid-template-rows: repeat(8, 1fr);
+  border: 20px solid whitesmoke;
+  width: 100vh;
+  height: 100vh;
+  -webkit-box-shadow: 0 10px 20px 20px rgba(104, 65, 39, 0.956);
+          box-shadow: 0 10px 20px 20px rgba(104, 65, 39, 0.956);
+  -webkit-animation: fade 2s forwards;
+          animation: fade 2s forwards;
+  font-size: 40px;
+}
+
+.board .squares {
+  width: 100%;
+  height: 100%;
+}
+
+.board .move {
+  -webkit-animation: firstMove 1s forwards;
+          animation: firstMove 1s forwards;
+  -webkit-animation-delay: 5s;
+          animation-delay: 5s;
+}
+
+.board .move2 {
+  -webkit-animation: secondMove 1s forwards;
+          animation: secondMove 1s forwards;
+  -webkit-animation-delay: 7s;
+          animation-delay: 7s;
+}
+
+.board :nth-child(n+1):nth-child(-n+8):nth-child(odd),
+.board :nth-child(n+9):nth-child(-n+16):nth-child(even),
+.board :nth-child(n+17):nth-child(-n+24):nth-child(odd),
+.board :nth-child(n+25):nth-child(-n+32):nth-child(even),
+.board :nth-child(n+33):nth-child(-n+40):nth-child(odd),
+.board :nth-child(n+41):nth-child(-n+48):nth-child(even),
+.board :nth-child(n+49):nth-child(-n+56):nth-child(odd),
+.board :nth-child(n+57):nth-child(-n+64):nth-child(even) {
+  background-color: white;
+}
+
+@media screen and (min-width: 320px) {
+  .board {
+    height: 70vh;
+    font-size: 40px;
+    position: relative;
+    top: 50px;
+    max-width: 100%;
+    border: 20px solid whitesmoke;
+  }
+}
+
 @-webkit-keyframes fade {
   0%, 20% {
     opacity: 0;
@@ -11,6 +72,7 @@
             transform: skew(1deg);
   }
 }
+
 @keyframes fade {
   0%, 20% {
     opacity: 0;
@@ -134,68 +196,5 @@ h1 {
   font-family: 'Cinzel Decorative', Verdana, Tahoma, sans-serif;
   font-size: 30px;
   color: white;
-}
-
-.board {
-  position: relative;
-  top: 50px;
-  display: -ms-grid;
-  display: grid;
-  margin: auto;
-  -ms-grid-columns: (1fr)[8];
-      grid-template-columns: repeat(8, 1fr);
-  -ms-grid-rows: (1fr)[8];
-      grid-template-rows: repeat(8, 1fr);
-  border: 20px solid whitesmoke;
-  max-width: 700px;
-  max-height: 700px;
-  width: 100vh;
-  height: 100vh;
-  -webkit-box-shadow: 0 10px 20px 20px rgba(104, 65, 39, 0.956);
-          box-shadow: 0 10px 20px 20px rgba(104, 65, 39, 0.956);
-  -webkit-animation: fade 2s forwards;
-          animation: fade 2s forwards;
-  font-size: 40px;
-}
-
-.board .squares {
-  width: 100%;
-  height: 100%;
-}
-
-.board .move {
-  -webkit-animation: firstMove 1s forwards;
-          animation: firstMove 1s forwards;
-  -webkit-animation-delay: 5s;
-          animation-delay: 5s;
-}
-
-.board .move2 {
-  -webkit-animation: secondMove 1s forwards;
-          animation: secondMove 1s forwards;
-  -webkit-animation-delay: 7s;
-          animation-delay: 7s;
-}
-
-.board :nth-child(n+1):nth-child(-n+8):nth-child(odd),
-.board :nth-child(n+9):nth-child(-n+16):nth-child(even),
-.board :nth-child(n+17):nth-child(-n+24):nth-child(odd),
-.board :nth-child(n+25):nth-child(-n+32):nth-child(even),
-.board :nth-child(n+33):nth-child(-n+40):nth-child(odd),
-.board :nth-child(n+41):nth-child(-n+48):nth-child(even),
-.board :nth-child(n+49):nth-child(-n+56):nth-child(odd),
-.board :nth-child(n+57):nth-child(-n+64):nth-child(even) {
-  background-color: white;
-}
-
-@media screen and (min-width: 320px) {
-  .board {
-    height: 70vh;
-    font-size: 40px;
-    position: relative;
-    top: 50px;
-    max-width: 100%;
-    border: 20px solid whitesmoke;
-  }
 }
 /*# sourceMappingURL=styles.css.map */
