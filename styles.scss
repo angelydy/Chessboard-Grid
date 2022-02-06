@@ -7,7 +7,7 @@
 }
 
 body {
-  margin: 60px;
+  margin: 30px;
   padding: 0;
   background: radial-gradient(circle, rgba(160, 92, 47, 0.956) 53%, rgba(0, 0, 0, 0.852445) 100%);
   text-align: center;
@@ -17,4 +17,5 @@ h1 {
   font-family: 'Cinzel Decorative', Verdana, Tahoma, sans-serif;
   font-size: 30px;
   color: white;
+  animation: pushSide 7s;
 }
